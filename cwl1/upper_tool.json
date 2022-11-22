@@ -1,0 +1,32 @@
+{
+    "cwlVersion": "v1.2",
+    "class": "CommandLineTool",
+    "label": "Upper Case Tool",
+    "inputs":
+    {
+        "text_file":
+        {
+            "type": "File",
+            "inputBinding":
+            {
+                "position": 1
+            }
+        }
+    },
+    "outputs":
+    {
+        "text_out":
+        {
+            "type": "File",
+            "outputBinding":
+            {
+                "glob": "upper.txt"
+            }
+        }
+    },
+    "baseCommand":
+    [
+        "python3",
+        "/Users/cerami/dev/cwl/cwl1/python/upper.py"
+    ]
+}

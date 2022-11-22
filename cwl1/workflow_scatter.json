@@ -1,0 +1,68 @@
+{
+    "cwlVersion": "v1.2",
+    "class": "Workflow",
+    "label": "JSON workflow",
+    "requirements":
+    {
+        "SubworkflowFeatureRequirement":
+        {},
+        "ScatterFeatureRequirement":
+        {},
+        "InlineJavascriptRequirement":
+        {}
+    },
+    "inputs":
+    {
+        "json":
+        {
+            "type": "File[]"
+        },
+        "field":
+        {
+            "type": "string[]"
+        }
+    },
+    "outputs":
+    {
+        "dirs":
+        {
+            "type": "Directory[]",
+            "outputSource": "subdirs/dirs"
+        }
+    },
+    "steps":
+    {
+        "workflow":
+        {
+            "run": "workflow.json",
+            "scatter":
+            [
+                "json",
+                "field"
+            ],
+            "scatterMethod": "dotproduct",
+            "in":
+            {
+                "json": "json",
+                "field": "field"
+            },
+            "out":
+            [
+                "text_out"
+            ]
+        },
+        "subdirs":
+        {
+            "run": "subdirs.json",
+            "in":
+            {
+                "json": "json",
+                "text_out": "workflow/text_out"
+            },
+            "out":
+            [
+                "dirs"
+            ]
+        }
+    }
+}

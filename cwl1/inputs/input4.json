@@ -1,0 +1,18 @@
+{
+    "json":
+    [
+        {
+            "class": "File",
+            "path": "../data/example1.json"
+        },
+        {
+            "class": "File",
+            "path": "../data/example2.json"
+        },
+        {
+            "class": "File",
+            "path": "../data/example3.json"
+        }
+    ],
+    "field": ["productName", "manufacturer", "productName"]
+}

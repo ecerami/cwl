@@ -1,0 +1,32 @@
+{
+    "json":
+    [
+        {
+            "class": "File",
+            "path": "../data/example1.json"
+        },
+        {
+            "class": "File",
+            "path": "../data/example2.json"
+        },
+        {
+            "class": "File",
+            "path": "../data/example3.json"
+        }
+    ],
+    "text_out":
+    [
+        {
+            "class": "File",
+            "path": "../data/example1.txt"
+        },
+        {
+            "class": "File",
+            "path": "../data/example2.txt"
+        },
+        {
+            "class": "File",
+            "path": "../data/example3.txt"
+        }
+    ],
+}

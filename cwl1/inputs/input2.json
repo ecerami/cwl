@@ -1,0 +1,7 @@
+{
+    "text_file":
+    {
+        "class": "File",
+        "path": "../data/example1.txt"
+    }
+}

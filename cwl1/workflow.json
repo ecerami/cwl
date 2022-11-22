@@ -1,0 +1,52 @@
+{
+    "cwlVersion": "v1.2",
+    "class": "Workflow",
+    "label": "JSON workflow",
+    "inputs":
+    {
+        "json":
+        {
+            "type": "File"
+        },
+        "field":
+        {
+            "type": "string"
+        },
+    },
+    "outputs":
+    {
+        "text_out":
+        {
+            "type": "File",
+            "outputSource": "upper/text_out"
+        }
+    },
+    "steps":
+    {
+        "extract":
+        {
+            "run": "extract_tool.json",
+            "in":
+            {
+                "json": "json",
+                "field": "field"
+            },
+            "out":
+            [
+                "json_out"
+            ]
+        },
+        "upper":
+        {
+            "run": "upper_tool.json",
+            "in":
+            {
+                "text_file": "extract/json_out"
+            },
+            "out":
+            [
+                "text_out"
+            ]
+        }
+    }
+}

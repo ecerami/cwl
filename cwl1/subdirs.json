@@ -1,0 +1,35 @@
+{
+    "cwlVersion": "v1.2",
+    "class": "ExpressionTool",
+    "requirements":
+    [
+        {
+            "class": "InlineJavascriptRequirement",
+            "expressionLib":
+            [
+                {
+                    "$include": "javascript/dir.js"
+                }
+            ]
+        }
+    ],
+    "inputs":
+    {
+        "json":
+        {
+            "type": "File[]"
+        },
+        "text_out":
+        {
+            "type": "File[]"
+        }
+    },
+    "outputs":
+    {
+        "dirs":
+        {
+            "type": "Directory[]"
+        }
+    },
+    "expression": "$(createDirectories(inputs))"
+}

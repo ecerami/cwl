@@ -1,0 +1,42 @@
+{
+    "cwlVersion": "v1.2",
+    "class": "CommandLineTool",
+    "label": "Extract JSON Tool",
+    "inputs":
+    {
+        "json":
+        {
+            "doc": "The JSON Files to Process",
+            "type": "File",
+            "inputBinding":
+            {
+                "position": 1
+            }
+        },
+        "field":
+        {
+            "doc": "The JSON Elements to be extracted.",
+            "type": "string",
+            "inputBinding":
+            {
+                "position": 2
+            }
+        }
+    },
+    "outputs":
+    {
+        "json_out":
+        {
+            "type": "File",
+            "outputBinding":
+            {
+                "glob": "json_out.txt"
+            }
+        }
+    },
+    "baseCommand":
+    [
+        "python3",
+        "/Users/cerami/dev/cwl/cwl1/python/extract.py"
+    ]
+}

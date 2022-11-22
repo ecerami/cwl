@@ -1,0 +1,8 @@
+{
+    "json":
+    {
+        "class": "File",
+        "path": "../data/example1.json"
+    },
+    "field": "productName"
+}
