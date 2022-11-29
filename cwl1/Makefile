@@ -26,8 +26,8 @@ validate:
 	cwltool --validate workflow_scatter.json
 
 pack:
-	cwlpack workflow.json --json > workflow_complete.json
-	cwlpack workflow.json > workflow_complete.cwl
+	cwlpack workflow_scatter.json --json > workflow_complete.json
+	cwlpack workflow_scatter.json > workflow_complete.cwl
 
 clean:
 	rm -rf out/
