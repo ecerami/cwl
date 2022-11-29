@@ -30,7 +30,6 @@ pack:
 	cwlpack workflow.json > workflow_complete.cwl
 
 clean:
-	rm -rf *.txt
 	rm -rf out/
 	rm workflow_complete.cwl
 	rm workflow_complete.json
