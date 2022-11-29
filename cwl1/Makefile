@@ -25,6 +25,12 @@ validate:
 	cwltool --validate subdirs.json
 	cwltool --validate workflow_scatter.json
 
+pack:
+	cwlpack workflow.json --json > workflow_complete.json
+	cwlpack workflow.json > workflow_complete.cwl
+
 clean:
 	rm -rf *.txt
 	rm -rf out/
+	rm workflow_complete.cwl
+	rm workflow_complete.json
