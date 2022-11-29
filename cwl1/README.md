@@ -23,6 +23,14 @@ You can validate all the CWL pipelines by running:
 
 	make validate
 
+## Python Docker Image
+
+The python folder contains two very simple Python command line tools.
+
+I have created a Docker image for these tools and pushed them to:
+
+https://hub.docker.com/repository/docker/ecerami/extract
+
 ## Pipelines
 
 The pipeline is built from the bottom up:

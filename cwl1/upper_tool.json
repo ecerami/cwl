@@ -2,6 +2,11 @@
     "cwlVersion": "v1.2",
     "class": "CommandLineTool",
     "label": "Upper Case Tool",
+    "hints": {
+        "DockerRequirement": {
+            "dockerPull": "ecerami/extract"
+        }
+    },    
     "inputs":
     {
         "text_file":
@@ -27,6 +32,6 @@
     "baseCommand":
     [
         "python3",
-        "/Users/cerami/dev/cwl/cwl1/python/upper.py"
+        "/app/upper.py"
     ]
 }

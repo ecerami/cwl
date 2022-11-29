@@ -2,6 +2,11 @@
     "cwlVersion": "v1.2",
     "class": "CommandLineTool",
     "label": "Extract JSON Tool",
+    "hints": {
+        "DockerRequirement": {
+            "dockerPull": "ecerami/extract"
+        }
+    },
     "inputs":
     {
         "json":
@@ -37,6 +42,6 @@
     "baseCommand":
     [
         "python3",
-        "/Users/cerami/dev/cwl/cwl1/python/extract.py"
+        "/app/extract.py"
     ]
 }
