@@ -9,13 +9,11 @@ The pipeline runs two steps:
 
 ## Installation
 
-To run the workflow, you will need a CWL runner.
-
 To get set-up, follow these instructions:
 
 	python3 -m venv .venv
 	source .venv/bin/activate
-	pip install cwltool
+	pip install -r requirements.txt
 
 ## Validation
 
@@ -35,8 +33,8 @@ https://hub.docker.com/repository/docker/ecerami/extract
 
 The pipeline is built from the bottom up:
 
-* extract_tool.json:  runs the extract step
-* upper_tool.json:  runs the upper case step
+* extract_tool.json:  runs the extract step via Docker.
+* upper_tool.json:  runs the upper case step via Docker.
 
 You can run these like so:
 
@@ -55,5 +53,9 @@ Finally, you can run the whole thing on multiple files:
 
 	make scatter
 
+## Packing
 
+You can pack the CWL into one file by running:
+
+	make pack
 
